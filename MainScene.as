@@ -11,6 +11,7 @@
 		
 		
 		public function MainScene() {
+			trace("Clip started.");
 			var textTitle:TextField=new TextField;
 			textTitle.text="TODO: Fill the title.";
 			textTitle.x=(width-textTitle.width)/2;
