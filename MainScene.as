@@ -19,6 +19,7 @@
 		public function MainScene() {
 			frameCounter=0;
 			fpsCounter=new TextField;
+			fpsCounter.name="fpsCounter";
 			fpsCounter.x=0;
 			fpsCounter.y=0;
 			fpsCounter.width=60;
