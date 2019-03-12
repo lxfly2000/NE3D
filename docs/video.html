@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no"/>
+		<meta name="theme-color" content="black"/>
+		<link rel="icon" href="https://avatars0.githubusercontent.com/u/11847274"/>
+		<style>
+			body{background: black;color: white;}
+			.FlashView{display: inline-block;margin: 0 6pt;}
+			.UILine{text-align: center;margin-top: 84pt;}
+			input[type="range"]{margin-right: 24pt;width: 108pt;}
+			.TextSlider{display: inline-block;}
+		</style>
+		<title>NE3D</title>
+	</head>
+	<body>
+		<div class="UILine" id="flashLine">
+			<video controls loop src="NE3DLR.mp4" width="1120" height="400" id="videoView">当前浏览器不支持插入视频。</video>
+		</div>
+		<div class="UILine">
+			<div class="TextSlider">尺寸<input type="range" id="sliderFlashSize" min="10" max="200" value="100"/></div>
+			<input type="button" value="重置" id="buttonReset"/>
+			<script>
+				var oriFlashWidth=1120,oriFlashHeight=400;
+				var fvs=document.getElementById("videoView");
+				document.getElementById("sliderFlashSize").addEventListener("change",function(){
+					fvs.width=Math.round(oriFlashWidth*this.value/100);
+					fvs.height=Math.round(oriFlashHeight*this.value/100);
+				});
+				document.getElementById("buttonReset").addEventListener("click",function(){
+					document.getElementById("sliderFlashSize").value=100;
+					fvs.width=oriFlashWidth;
+					fvs.height=oriFlashHeight;
+				});
+			</script>
+		</div>
+	</body>
+</html>
