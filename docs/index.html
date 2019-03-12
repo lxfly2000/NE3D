@@ -10,6 +10,7 @@
 			.FlashView{display: inline-block;margin: 0 6pt;}
 			.UILine{text-align: center;margin-top: 84pt;}
 			input[type="range"]{margin-right: 24pt;width: 108pt;}
+			.TextSlider{display: inline-block;}
 		</style>
 		<title>NE3D</title>
 		<script src="Scripts/swfobject_modified.js"></script>
@@ -70,7 +71,9 @@
 			</div>
 		</div>
 		<div class="UILine">
-			尺寸<input type="range" id="sliderFlashSize" min="10" max="200" value="100"/>间距<input type="range" id="sliderViewDistance" min="0" max="150" value="6"/><input type="button" value="交换" id="buttonExchange"/>
+			<div class="TextSlider">尺寸<input type="range" id="sliderFlashSize" min="10" max="200" value="100"/></div>
+			<div class="TextSlider">间距<input type="range" id="sliderViewDistance" min="0" max="150" value="6"/></div>
+			<input type="button" value="交换" id="buttonExchange"/>
 			<script>
 				var oriFlashWidth=550,oriFlashHeight=400;
 				document.getElementById("sliderFlashSize").addEventListener("change",function(){
