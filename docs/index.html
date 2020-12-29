@@ -11,6 +11,7 @@
 			.UILine{text-align: center;margin-top: 84pt;}
 			input[type="range"]{margin-right: 24pt;width: 108pt;}
 			.TextSlider{display: inline-block;}
+			a{color: aqua;}
 		</style>
 		<title>NE3D</title>
 		<script src="Scripts/swfobject_modified.js"></script>
@@ -71,7 +72,7 @@
 			</div>
 		</div>
 		<div class="UILine">
-			<span style="margin-right: 24pt"><a href="video.html" style="color: aqua">视频</a></span>
+			<span style="margin-right: 24pt"><a href="video.html">视频</a></span>
 			<div class="TextSlider">尺寸<input type="range" id="sliderFlashSize" min="10" max="200" value="100"/></div>
 			<div class="TextSlider">间距<input type="range" id="sliderViewDistance" min="0" max="150" value="6"/></div>
 			<input type="button" value="交换" id="buttonExchange"/>
@@ -102,8 +103,15 @@
 			</script>
 		</div>
 <script type="text/javascript">
+			if(new Date().getFullYear()>2020){
+				var flashViews=document.getElementsByClassName("FlashView");
+				for(var i=0;i<flashViews.length;i++){
+					flashViews[i].innerHTML="Flash 内容已停用。<a href=\"NE3D.swf\">源文件</a>";
+				}
+			}else{
 swfobject.registerObject("FlashID");
 swfobject.registerObject("FlashID2");
+}
 </script>
 	</body>
 </html>
